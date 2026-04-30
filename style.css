@@ -34,19 +34,28 @@ body {
     background-size: 80% auto; 
 }
         
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: #f5f0e8;
-            min-height: 100vh;
-        }
-        
-        .page {
-            padding: 20px;
-            text-align: center;
-            background: #f5f0e8;
-            position: relative;
-        }
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    /* Rimuoviamo il background solido per vedere l'immagine nel body */
+    background: transparent; 
+    min-height: 100vh;
+}
+
+.page {
+    padding: 20px;
+    text-align: center;
+    /* Rimuoviamo il background solido */
+    background: transparent; 
+    position: relative;
+    
+    /* Diamo un'altezza minima alle sezioni così i contenuti 
+       non sono tutti appiccicati e l'immagine "scorre" sotto */
+    min-height: 80vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
         
         .page img {
             width: 100%;
