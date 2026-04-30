@@ -21,7 +21,7 @@ body {
     background-color: #f5f0e8;
 
     /* Configurazione Immagine Unica e Fissa */
-    background-image: url('background.jpg');
+    background-image: url('background.jpeg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     
