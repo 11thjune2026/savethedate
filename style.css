@@ -333,6 +333,9 @@ body {
     background: transparent;
 }
 
+.hero-spacer {
+    flex-grow: 1; /* Questa è la "molla": mangia tutto lo spazio disponibile tra i due testi */
+}
 .save-the-date {
     font-family: 'Great Vibes', cursive;
     font-size: clamp(2rem, 8vw, 3.5rem); /* Si ridimensiona fluidamente in base allo schermo */
