@@ -5,22 +5,33 @@
             box-sizing: border-box;
         }
         
+html {
+    /* Assicura che l'area cliccabile e lo sfondo coprano tutto lo schermo */
+    height: 100%;
+}
+
 body {
-    /* Font e colori base */
     font-family: 'Cormorant Garamond', serif;
     color: #3d3d3d;
     line-height: 1.7;
     margin: 0;
+    min-height: 100%; /* Importante per far scorrere i contenuti */
 
-    /* Sfondo: Colore e Immagine */
+    /* Sfondo: Colore delle "bande" laterali */
     background-color: #f5f0e8;
-    background-image: url('background.jpg');
 
-    /* Configurazione Immagine */
+    /* Configurazione Immagine Unica e Fissa */
+    background-image: url('background.jpg');
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Effetto "roll over" */
-    background-position: center top; /* Centrata orizzontalmente, parte dall'alto */
-    background-size: 80% auto; /* Larghezza all'80% dello schermo */
+    background-attachment: fixed;
+    
+    /* Centratura perfetta: orizzontale e verticale */
+    background-position: center center; 
+    
+    /* Gestione dimensioni: 
+       '80% auto' lascia le bande laterali del 10% per lato. 
+       'contain' invece adatta l'immagine senza tagliarla. */
+    background-size: 80% auto; 
 }
         
         .container {
