@@ -129,7 +129,7 @@ body {
             font-size: 20px;
             margin-bottom: 8px;
             font-weight: 500;
-            color: #3d3d3d;
+            color: #1402a6;
         }
         
         .address {
@@ -336,7 +336,7 @@ body {
     padding: 10vh 0; /* Lascia il 10% di spazio vuoto sopra e sotto */
     box-sizing: border-box;
     background: transparent;
-       font-color:#1402a6;
+    color:#1402a6;
 }
 
 .hero-spacer {
@@ -354,7 +354,7 @@ body {
     font-size: clamp(2.5rem, 10vw, 4.5rem); /* Leggermente più grande del titolo */
     margin: 0;
     text-align: center;
-       font-color:#1402a6;
+    color:#1402a6;
 }
 
 .calendar-section {
