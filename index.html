@@ -126,6 +126,7 @@
     </div>
     
     <script>
+        // 1. Funzione Calendario
         function addToCalendar() {
             const title = "Matrimonio di Marco & Ji hyun";
             const location = "Palazzo d'Accursio, Piazza Maggiore 6, 40124 Bologna, Italia";
@@ -133,40 +134,16 @@
             const startDate = "20260611T090000Z";
             const endDate = "20260611T130000Z";
             
-            const googleCalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}`;
+            const googleCalUrl = `https://google.com{encodeURIComponent(title)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}`;
             
             window.open(googleCalUrl, '_blank');
         }
-        
+    
+        // 4. Gestione Formspree (Opzionale: solo per mostrare il messaggio di successo senza cambiare pagina)
+        // Se preferisci la pagina di conferma standard di Formspree, puoi anche eliminare questo blocco.
         document.getElementById('rsvp-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(this);
-            const data = {
-                name: formData.get('name'),
-                phone: formData.get('phone'),
-                attendance: formData.get('attendance'),
-                guests: formData.get('guests'),
-                message: formData.get('message')
-            };
-            
-            // Invia SMS
-            const smsText = `[RSVP Matrimonio]
-Nome: ${data.name}
-Telefono: ${data.phone || 'Non fornito'}
-Presenza: ${data.attendance}
-Messaggio: ${data.message || 'Nessuno'}`;
-            
-            const smsUrl = `sms:+393393580092?body=${encodeURIComponent(smsText)}`;
-            window.location.href = smsUrl;
-            
-            // Mostra messaggio di successo
+            // Non mettiamo e.preventDefault() così il form parte verso Formspree regolarmente
             document.getElementById('successMessage').classList.add('show');
-            this.reset();
-            
-            setTimeout(() => {
-                document.getElementById('successMessage').classList.remove('show');
-            }, 5000);
         });
     </script>
 </body>
