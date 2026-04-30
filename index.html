@@ -134,11 +134,8 @@ function addToCalendar() {
     const startDate = "20260611T090000Z";
     const endDate = "20260611T130000Z";
     
-    // Costruiamo l'URL pezzo per pezzo per evitare errori
-    const baseUrl = "https://google.com";
-    const params = `&text=${encodeURIComponent(title)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}`;
-    
-    const googleCalUrl = baseUrl + params;
+    // NOTA: Assicurati che ci sia il "?" dopo "render" e "&text=" prima del titolo
+    const googleCalUrl = `https://google.com{encodeURIComponent(title)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}`;
     
     window.open(googleCalUrl, '_blank');
 }
