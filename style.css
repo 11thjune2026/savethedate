@@ -31,7 +31,7 @@ body {
     /* Gestione dimensioni: 
        '80% auto' lascia le bande laterali del 10% per lato. 
        'contain' invece adatta l'immagine senza tagliarla. */
-    background-size: 80% auto; 
+    background-size: 90% auto; 
 }
         
 .container {
@@ -337,6 +337,7 @@ body {
     box-sizing: border-box;
     background: transparent;
     color:#1402a6 !important;
+    -webkit-text-fill-color: #1402a6;
 }
 
 .hero-spacer {
