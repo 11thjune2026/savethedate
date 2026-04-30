@@ -321,3 +321,24 @@ body {
         .success-message.show {
             display: block;
         }
+
+.hero-section {
+    height: 100vh; /* Occupa tutta l'altezza dello schermo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Spinge il primo elemento su e l'ultimo giù */
+    padding: 60px 20px; /* Margine interno per non far toccare i bordi dello schermo */
+    box-sizing: border-box;
+}
+
+.save-the-date {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.couple-names {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    margin: 0;
+}
