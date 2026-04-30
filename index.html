@@ -127,18 +127,17 @@
     
     <script>
         // 1. Funzione Calendario
-function addToCalendar() {
-    const title = "Matrimonio di Marco & Ji hyun";
-    const location = "Palazzo d'Accursio, Piazza Maggiore 6, 40124 Bologna, Italia";
-    const details = "Matrimonio di Marco Toniato e Ji hyun Park";
-    const startDate = "20260611T090000Z";
-    const endDate = "20260611T130000Z";
-    
-    // NOTA: Assicurati che ci sia il "?" dopo "render" e "&text=" prima del titolo
-    const googleCalUrl = `https://google.com{encodeURIComponent(title)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}`;
-    
-    window.open(googleCalUrl, '_blank');
-}
+        function addToCalendar() {
+            const title = "Matrimonio di Marco & Ji hyun";
+            const location = "Palazzo d'Accursio, Piazza Maggiore 6, 40124 Bologna, Italia";
+            const details = "Matrimonio di Marco Toniato e Ji hyun Park";
+            const startDate = "20260611T090000Z";
+            const endDate = "20260611T130000Z";
+            
+            const googleCalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}`;
+            
+            window.open(googleCalUrl, '_blank');
+        }
     
         // 4. Gestione Formspree (Opzionale: solo per mostrare il messaggio di successo senza cambiare pagina)
         // Se preferisci la pagina di conferma standard di Formspree, puoi anche eliminare questo blocco.
