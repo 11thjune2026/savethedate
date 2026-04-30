@@ -391,7 +391,7 @@ body {
 }
 
 .location-section {
-    background: transparent !important; /* Forza la trasparenza per rivedere l'immagine */
+    background: #f5f0e8 !important; /* Forza la trasparenza per rivedere l'immagine */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
