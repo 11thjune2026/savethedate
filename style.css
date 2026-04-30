@@ -5,13 +5,23 @@
             box-sizing: border-box;
         }
         
-        body {
-            font-family: 'Cormorant Garamond', serif;
-            background: #f5f0e8;
-            background-image: url('background.jpg');
-            color: #3d3d3d;
-            line-height: 1.7;
-        }
+body {
+    /* Font e colori base */
+    font-family: 'Cormorant Garamond', serif;
+    color: #3d3d3d;
+    line-height: 1.7;
+    margin: 0;
+
+    /* Sfondo: Colore e Immagine */
+    background-color: #f5f0e8;
+    background-image: url('background.jpg');
+
+    /* Configurazione Immagine */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Effetto "roll over" */
+    background-position: center top; /* Centrata orizzontalmente, parte dall'alto */
+    background-size: 80% auto; /* Larghezza all'80% dello schermo */
+}
         
         .container {
             max-width: 600px;
