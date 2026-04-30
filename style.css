@@ -323,22 +323,26 @@ body {
         }
 
 .hero-section {
-    height: 100vh; /* Occupa tutta l'altezza dello schermo */
+    height: 100vh; /* Forza la sezione a essere esattamente alta quanto lo schermo */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Spinge il primo elemento su e l'ultimo giù */
-    padding: 60px 20px; /* Margine interno per non far toccare i bordi dello schermo */
+    justify-content: space-between; /* Sposta il primo in cima e l'ultimo in fondo */
+    align-items: center; /* Centra orizzontalmente */
+    padding: 10vh 0; /* Lascia il 10% di spazio vuoto sopra e sotto */
     box-sizing: border-box;
+    background: transparent;
 }
 
 .save-the-date {
     font-family: 'Great Vibes', cursive;
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 8vw, 3.5rem); /* Si ridimensiona fluidamente in base allo schermo */
     margin: 0;
+    text-align: center;
 }
 
 .couple-names {
     font-family: 'Great Vibes', cursive;
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 10vw, 4.5rem); /* Leggermente più grande del titolo */
     margin: 0;
+    text-align: center;
 }
